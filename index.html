@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Photobox</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="shortcut.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <link type="text/css" href="jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <link type="text/css" href="spinbox.css" rel="stylesheet" />
+    <script type="text/javascript" src="sliders.js"></script>
+    <script type="text/javascript" src="spinbox.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="themes.css" />
+</head>
+<body>
+    <div id="draggable">
+        <canvas class="canvas" id="canvas" width="0" height="0" style="display:none">Your browser does not support Canvas. Get Chrome.</canvas>
+        <canvas style="display:none" id="ocanvas" width="0" height="0"></canvas>
+    </div>
+<div class="right">
+    <img src="img/header.svg" alt="Photobox" height="40" /><hr />
+    <button onclick="camera.toScreen();">Fit to Screen</button><button onclick="camera.zoom(100);">Actual Pixels</button><button onclick="camera.center();">Center Image</button>
+    <table cellpadding="4px">
+        <tr>
+            <td><img src="img/zoom-min.png" title="12%" onclick="camera.zoom(12)" /></td>
+            <td><div class="slider" id="zoomslider"></div></td>
+            <td><img src="img/zoom-max.png" title="100%" onclick="camera.zoom(100)" /></td>
+            <td><img src="img/zoomout.png" title="Zoom Out" onclick="camera.zoomOut()" /></td>
+            <td><img src="img/zoomin.png" title="Zoom In" onclick="camera.zoomIn()" /></td>
+        </tr>
+    </table>
+    <hr />
+    <input type="text" id="brightness" data-label="Brightness:" />
+    <input type="text" id="contrast" data-label="Contrast:" />
+    <input type="text" id="gamma" data-label="Gamma:" />
+    <input type="text" id="soften" data-label="Soften:" />
+    <hr />
+    <input type="text" id="temperature" data-label="Blue/Yellow:" />
+    <input type="text" id="tint" data-label="Green/Magenta:" />
+</div>
+<div class="dia">
+    <div class="diacontent">
+        <h1>Open an Image</h1>
+        <div id="dropzone">Drop files here<br />
+        or<br />
+        Click to open filepicker</div>
+        <input type="file" id="uploader" />
+    </div>
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
