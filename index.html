@@ -23,11 +23,9 @@
     <button onclick="camera.toScreen();">Fit to Screen</button><button onclick="camera.zoom(100);">Actual Pixels</button><button onclick="camera.center();">Center Image</button>
     <table cellpadding="4px">
         <tr>
-            <td><img src="img/zoom-min.png" title="12%" onclick="camera.zoom(12)" /></td>
+            <td><img class="zoom-btn" src="img/zoomout.png" title="Zoom Out" onclick="camera.zoomOut()" /></td>
             <td><div class="slider" id="zoomslider"></div></td>
-            <td><img src="img/zoom-max.png" title="100%" onclick="camera.zoom(100)" /></td>
-            <td><img src="img/zoomout.png" title="Zoom Out" onclick="camera.zoomOut()" /></td>
-            <td><img src="img/zoomin.png" title="Zoom In" onclick="camera.zoomIn()" /></td>
+            <td><img class="zoom-btn" src="img/zoomin.png" title="Zoom In" onclick="camera.zoomIn()" /></td>
         </tr>
     </table>
     <hr />
